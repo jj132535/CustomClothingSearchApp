@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DesignActivity">
+
+    <ImageView
+        android:id="@+id/appLogoImage"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:src="@drawable/logo" />
+
+    <Spinner
+        android:id="@+id/clothesTypeSpinner"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@id/appLogoImage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+    <ImageView
+        android:id="@+id/silhouetteImage"
+        android:layout_width="wrap_content"
+        android:layout_height="300dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@id/clothesTypeSpinner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:src="@drawable/clothes_short_t_shirt" />
+
+    <ImageView
+        android:id="@+id/partsPreview1"
+        android:layout_width="wrap_content"
+        android:layout_height="300dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@id/clothesTypeSpinner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:src="@android:color/transparent" />
+
+    <ImageView
+        android:id="@+id/partsPreview2"
+        android:layout_width="wrap_content"
+        android:layout_height="300dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@id/clothesTypeSpinner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:src="@android:color/transparent" />
+
+    <ImageView
+        android:id="@+id/partsPreview3"
+        android:layout_width="wrap_content"
+        android:layout_height="300dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@id/clothesTypeSpinner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:src="@android:color/transparent" />
+
+
+    <LinearLayout
+        android:id="@+id/colorLinerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/silhouetteImage">
+
+        <ImageView
+            android:id="@+id/colorImage1"
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:src="@drawable/colors_black_col" />
+
+        <ImageView
+            android:id="@+id/colorImage2"
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:src="@drawable/colors_blue_col" />
+
+        <ImageView
+            android:id="@+id/colorImage3"
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:src="@drawable/colors_beige_col" />
+
+        <ImageView
+            android:id="@+id/colorImage4"
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:src="@drawable/colors_gray_col" />
+
+        <ImageView
+            android:id="@+id/colorImage5"
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:src="@drawable/colors_green_col" />
+
+        <ImageView
+            android:id="@+id/colorImage6"
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:src="@drawable/colors_ivory_col" />
+
+        <ImageView
+            android:id="@+id/colorImage7"
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:src="@drawable/colors_mint_col" />
+
+        <ImageView
+            android:id="@+id/colorImage8"
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:src="@drawable/colors_red_col" />
+
+        <ImageView
+            android:id="@+id/colorImage9"
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:src="@drawable/colors_white_col" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@id/colorLinerLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/completeButton"
+        android:visibility="visible">
+
+        <GridLayout
+            android:id="@+id/partsGridLayout"
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:columnCount="4">
+
+            <!-- 각 partsImages View -->
+            <ImageView
+                android:id="@+id/partsImage1"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:src="@drawable/parts_crop_collar1" />
+
+            <ImageView
+                android:id="@+id/partsImage2"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:src="@drawable/parts_crop_collar2" />
+
+            <ImageView
+                android:id="@+id/partsImage3"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:src="@drawable/parts_crop_collar3" />
+
+            <ImageView
+                android:id="@+id/partsImage4"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:src="@drawable/parts_crop_collar4" />
+
+            <ImageView
+                android:id="@+id/partsImage5"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:src="@drawable/parts_crop_button1" />
+
+            <ImageView
+                android:id="@+id/partsImage6"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:src="@drawable/parts_crop_pocket1" />
+
+            <ImageView
+                android:id="@+id/partsImage7"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:src="@drawable/parts_crop_cargo1" />
+        </GridLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/completeButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="32dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@color/black"
+        android:text="상품 검색하기" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
