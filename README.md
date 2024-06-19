@@ -44,4 +44,4 @@
   * 테스트 빌드 시 네이버 개발자 센터(https://developers.naver.com/)에서 CLIENT_ID와 CLIENT_SECRET을 발급받아 그 키를 파일의 DesignActivity.java에 입력해야 한다.
 #### 2.5 발표 영상
 youtube 동영상
-![Video Label](https://youtu.be/Os5H7JbF72Y)
+https://youtu.be/Os5H7JbF72Y?si=yEldA_o0_KH1PQbN
